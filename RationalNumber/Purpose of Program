@@ -1,0 +1,16 @@
+Implement RationalNumber as a C++ class. 
+
+A RationalNumber has two integer member variables. 
+Call the member variables a (to mean the numerator) and b (to mean the denominator). 
+Add the following member functions: 
+o Default constructor:  set a = 0 and b = 1 
+o Non-default constructors with only one argument: set a = the argument, and set b = 1 
+o Non-default constructor with two arguments: set a and b to the argument values 
+o Getters and setters: that return member variables and set the member variables 
+o toDouble that returns the RationalNumber object as double 
+o standardize as described in Week 1 Lab Work o reduce as described in Week 1 Lab Work 
+ 
+Write a main program to test your function. 
+You should be able to decide how many objects to create, what member functions to call,
+and what kind of outputs should you display in order to convince yourself your class is well designed and well tested for correctness. 
+ 
