@@ -61,3 +61,38 @@ ostream& operator << (ostream &outputStream, const SmartArray &L)
 
 	return outputStream;
 }
+
+SmartArray::SmartArray(const SmartArray &L)  // Copy Constructor
+{
+	this->size = L.getSize();
+	if (this->getSize() > 0)
+	{
+		this->A = new int[this->getSize()];
+		for (int i = 0; i < this->getSize(); i++)
+			this->A[i] = L[i];
+	}
+}
+
+SmartArray::~SmartArray()     // deconstructor
+{
+	if (this->getSize() > 0)
+	{
+		delete[] this->A;
+		this->size = 0;
+	}
+}
+
+SmartArray& SmartArray::operator=(const SmartArray &L)
+{
+	//Delete the left hand side object's memory
+	this->~SmartArray();
+	//Now copy the right hand side to the left
+	this->size = L.getSize();
+	if (this->getSize() > 0)
+	{
+		this->A = new int[this->getSize()];
+		for (int i = 0; i < this->getSize(); i++)
+			this->A[i] = L[i];
+	}
+	return *this;
+}
